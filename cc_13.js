@@ -27,3 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     addEmployeeCard("Lebron James", "Player");
     addEmployeeCard("Walter White", "Chemist");
 });
+
+//Task 3 - Converting NodeLists to Arrays for Bulk Updates
+document.addEventListener("DOMContentLoaded", function () {
+    const nodeList = document.querySelectorAll(".employee-card")
+    const cardArray = Array.from(nodeList)
+
+    cardArray.forEach(card => { //Updating Cards
+            card.style.backgroundColor = "#e94af7"
+            card.style.border = "5px solid #0accc2"
+    })
+})
