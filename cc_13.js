@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
-        removeButton.addEventListener("click", () => {
+        removeButton.addEventListener("click", (event) => {
             card.remove();
+            event.stopPropagation
         });
         card.appendChild(removeButton);
 
@@ -38,3 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
             card.style.border = "5px solid #0accc2"
     })
 })
+
+//Task 4 - Impending Removal of Employee Cards with Event Bubbling
+employeeContainer.addEventListener("click", () => { //Notifies when Employee Card is clicked 
+    console.log("Employee Card Clicked")
+})
+//Added stopPropagation in Code in Task 2 
